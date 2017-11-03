@@ -16,14 +16,15 @@ import CustomerService from './login/components/customerService';
 import { addLocaleData, IntlProvider } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import es from 'react-intl/locale-data/es';
-import fr from 'react-intl/locale-data/fr';
-import de from 'react-intl/locale-data/de';
-import it from 'react-intl/locale-data/it';
-import br from 'react-intl/locale-data/br';
+// import fr from 'react-intl/locale-data/fr';
+// import de from 'react-intl/locale-data/de';
+// import it from 'react-intl/locale-data/it';
+// import br from 'react-intl/locale-data/br';
 import messages from './login/messages.json';
 
 
-addLocaleData([...en, ...es, ...fr, ...de, ...it, ...br]);
+// addLocaleData([...en, ...es, ...fr, ...de, ...it, ...br]);
+addLocaleData([...en, ...es]);
 
 
 const HeaderDate = () => {
