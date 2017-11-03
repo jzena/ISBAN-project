@@ -8,23 +8,23 @@ import { connect } from 'react-redux';
 import Login from './login/components/login';
 import SubMenu from './login/components/subMenu';
 import SubMenuLanguages from './login/components/subMenuLanguages';
-// import Terms from './login/components/terms';
-// import Policy from './login/components/policy';
-// import About from './login/components/about';
-// import CustomerService from './login/components/customerService';
+import Terms from './login/components/terms';
+import Policy from './login/components/policy';
+import About from './login/components/about';
+import CustomerService from './login/components/customerService';
 
-// import { addLocaleData, IntlProvider } from 'react-intl';
-// import en from 'react-intl/locale-data/en';
-// import es from 'react-intl/locale-data/es';
-// import fr from 'react-intl/locale-data/fr';
-// import de from 'react-intl/locale-data/de';
-// import it from 'react-intl/locale-data/it';
-// import br from 'react-intl/locale-data/br';
-// import messages from './login/messages.json';
+import { addLocaleData, IntlProvider } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
+import fr from 'react-intl/locale-data/fr';
+import de from 'react-intl/locale-data/de';
+import it from 'react-intl/locale-data/it';
+import br from 'react-intl/locale-data/br';
+import messages from './login/messages.json';
 
 
-// addLocaleData([...en, ...es, ...fr, ...de, ...it, ...br]);
-// addLocaleData([...en, ...es]);
+addLocaleData([...en, ...es, ...fr, ...de, ...it, ...br]);
+addLocaleData([...en, ...es]);
 
 
 const HeaderDate = () => {
@@ -49,7 +49,7 @@ const App = (props) => {
   }
   return (
 
-    // <IntlProvider locale={props.locale} messages={messages[props.locale]}>
+    <IntlProvider locale={props.locale} messages={messages[props.locale]}>
       <Router basename={repo}>
         <div>
           <div className="div_language">
@@ -58,13 +58,13 @@ const App = (props) => {
           <HeaderDate />
           <SubMenu />
           <Route exact path="/" component={Login} />
-          {/* <Route exact path="/terms" component={Terms} />
+          <Route exact path="/terms" component={Terms} />
           <Route exact path="/policy" component={Policy} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/customerService" component={CustomerService} /> */}
+          <Route exact path="/customerService" component={CustomerService} />
         </div>
       </Router>
-    // </IntlProvider>
+    </IntlProvider>
   );
 };
 
