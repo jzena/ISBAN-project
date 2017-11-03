@@ -1,7 +1,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 <br>
-[Demo](https://jzena.github.io/ISBAN-project/)
+[Demo](https://jzena.github.io/jzban-project/)
 # Execute the project 
 To launch the project, run the following commands:
 - `npm install` to install all dependencies.
