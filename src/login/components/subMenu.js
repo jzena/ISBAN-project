@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 const SubMenu = () => {
     return (
         <div className="div_subMenu">
-            <Link to='/'>Terms and conditions</Link> |
-            <Link to='/'>Cookie Policy</Link> |
-            <Link to='/'>About us</Link>  |
-            <Link to='/'>Customer service</Link>
+            <Link to='/'><FormattedMessage id="submenu.login" /></Link> |
+            <Link to='/terms'><FormattedMessage id="submenu.terms" /></Link> |
+            <Link to='/policy'><FormattedMessage id="submenu.policy" /></Link> |
+            <Link to='/about'><FormattedMessage id="submenu.about" /></Link>  |
+            <Link to='/customerService'><FormattedMessage id="submenu.customerService" /></Link>
         </div>
     )
 };

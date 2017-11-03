@@ -1,8 +1,26 @@
 {
     "en": {
-        "login.title": "Login"
+        "login.title": "Log in",
+        "submenu.login": "Log in",
+        "submenu.terms": "Terms and conditions",
+        "submenu.policy": "Cookie Policy",
+        "submenu.about": "About",
+        "submenu.customerService": "Customer service",
+        "terms.title": "Terms and conditions",
+        "about.title": "About",
+        "policy.title": "Policy security",
+        "customerService.title": "Customer service"
     },
     "es": {
-        "login.title": "Iniciar sesión"
+        "login.title": "Iniciar sesión",
+        "submenu.login": "Iniciar sesion",
+        "submenu.terms": "Términos y condiciones",
+        "submenu.policy": "Política de Cookie",
+        "submenu.about": "Acerca",
+        "submenu.customerService": "Servicio de cliente",
+        "terms.title": "Términos y condiciones",
+        "about.title": "Acerca de",
+        "policy.title": "Politica de seguridad",
+        "customerService.title": "Servicio de cliente"
     }
 }

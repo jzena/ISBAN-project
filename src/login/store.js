@@ -2,7 +2,7 @@ import { createStore, combineReducers } from 'redux';
 
 const setLanguage = (state = 'en', action) => {
     var nuevoEstado = Object.assign({}, state);
-    
+
     switch (action.type) {
         case 'SET_LANGUAGE':
             nuevoEstado = action.language;

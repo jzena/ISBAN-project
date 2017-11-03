@@ -21,3 +21,6 @@ body {
   height: 20px;
   margin-bottom: 20px;
 }
+a{
+  cursor: pointer;
+}
