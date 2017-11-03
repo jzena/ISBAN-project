@@ -1,11 +1,12 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 
 const Policy = () => {
     return (
         <div>
             <h2>
-                <FormattedMessage id="policy.title" />
+                {/* <FormattedMessage id="policy.title" /> */}
+                Policy
             </h2>
         </div>
     );

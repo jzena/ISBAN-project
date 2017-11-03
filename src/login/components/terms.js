@@ -1,10 +1,11 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 
 const Terms = () => {
     return (
         <h2>
-            <FormattedMessage id="terms.title" />
+            {/* <FormattedMessage id="terms.title" /> */}
+            Terminos
         </h2>
     );
 };

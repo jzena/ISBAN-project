@@ -20,7 +20,7 @@ import SubMenuLanguages from './login/components/subMenuLanguages';
 // import de from 'react-intl/locale-data/de';
 // import it from 'react-intl/locale-data/it';
 // import br from 'react-intl/locale-data/br';
-import messages from './login/messages.json';
+// import messages from './login/messages.json';
 
 
 // addLocaleData([...en, ...es, ...fr, ...de, ...it, ...br]);
