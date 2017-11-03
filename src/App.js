@@ -1,9 +1,7 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addLocaleData, IntlProvider } from 'react-intl';
 
 import Login from './login/components/login';
 import SubMenu from './login/components/subMenu';
@@ -12,8 +10,9 @@ import Terms from './login/components/terms';
 import Policy from './login/components/policy';
 import About from './login/components/about';
 import CustomerService from './login/components/customerService';
+import ChangePassword from './login/components/changePassword';
+import ForgottenPassword from './login/components/forgottenPassword';
 
-import { addLocaleData, IntlProvider } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import es from 'react-intl/locale-data/es';
 import fr from 'react-intl/locale-data/fr';
@@ -24,8 +23,6 @@ import messages from './login/messages.json';
 
 
 addLocaleData([...en, ...es, ...fr, ...de, ...it, ...br]);
-addLocaleData([...en, ...es]);
-
 
 const HeaderDate = () => {
   return (
@@ -58,10 +55,12 @@ const App = (props) => {
           <HeaderDate />
           <SubMenu />
           <Route exact path="/" component={Login} />
-          <Route exact path="/terms" component={Terms} />
-          <Route exact path="/policy" component={Policy} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/customerService" component={CustomerService} />
+          <Route path="/terms" component={Terms} />
+          <Route path="/policy" component={Policy} />
+          <Route path="/about" component={About} />
+          <Route path="/customerService" component={CustomerService} />
+          <Route path="/changePassword" component={ChangePassword} />
+          <Route path="/forgottenPassword" component={ForgottenPassword} />
         </div>
       </Router>
     </IntlProvider>
@@ -75,9 +74,6 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    setDefaultLanguage: (locale) => {
-      dispatch({ type: 'SET_DEFAULT_LANGUAGE', language: locale })
-    },
     setLanguage: (locale) => {
       dispatch({ type: 'SET_LANGUAGE', language: locale })
     }

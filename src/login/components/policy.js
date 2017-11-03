@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 
 const Policy = () => {
     return (
-        <div>
+        <div className="container">
             <h2>
                 <FormattedMessage id="policy.title" />
                 

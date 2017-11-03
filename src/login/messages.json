@@ -1,6 +1,11 @@
 {
     "en": {
         "login.title": "Log in",
+        "login.user": "User",
+        "login.password": "Password",
+        "login.change.password": "Change password",
+        "login.forgotten.password": "Forgotten your password",
+        "login.enter": "enter",
         "submenu.login": "Log in",
         "submenu.terms": "Terms and conditions",
         "submenu.policy": "Cookie Policy",
@@ -13,6 +18,11 @@
     },
     "es": {
         "login.title": "Iniciar sesión",
+        "login.user": "Usuario",
+        "login.password": "Contraseña",
+        "login.change.password": "Cambiar password",
+        "login.forgotten.password": "Olvidaste tu password",
+        "login.enter": "entrar",
         "submenu.login": "Iniciar sesion",
         "submenu.terms": "Términos y condiciones",
         "submenu.policy": "Política de Cookie",

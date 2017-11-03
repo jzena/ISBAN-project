@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 const About = () => {
     return (
-        <div>
+        <div className="container">
             <h2>
                 <FormattedMessage id="about.title" />                
             </h2>
