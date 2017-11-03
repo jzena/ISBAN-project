@@ -2,10 +2,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 <br>
 [Demo](https://jzena.github.io/ISBAN-project/)
-#Execute the project 
+# Execute the project 
 To launch the project, run the following commands:
-*`npm install` to install all dependencies.
-*`npm start` to launch the project.
+- `npm install` to install all dependencies.
+- `npm start` to launch the project.
 
 ## Documentation
 - [redux](https://www.npmjs.com/package/redux)
