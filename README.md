@@ -15,9 +15,23 @@ To launch the project, run the following commands:
 - [react-intl](https://github.com/yahoo/react-intl)
 
 ## Dependencies
-`npm install --save redux`
+`npm install --save redux`<br>
 `npm install --save react-redux`
 `npm install --save react-router-dom`
 `npm install --save redux-form`
 `npm install --save axios`
 `npm install --save react-intl`
+`npm install --save enzyme enzyme-adapter-react-16 react-test-renderer`
+
+## testing
+- [Jest testing](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
+- `npm run test`
+- `npm test` Jest will launch in the watch mode
+
+### Focusing and Excluding Tests
+You can replace `it()` with `xit()` to temporarily exclude a test from being executed.
+Similarly, `fit()` lets you focus on a specific test without running any other tests.
+
+### Coverage Reporting
+Jest has an integrated coverage reporter that works well with ES6 and requires no configuration.
+Run `npm test -- --coverage` (note extra `--` in the middle) to include a coverage report like this:

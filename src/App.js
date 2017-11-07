@@ -1,82 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { addLocaleData, IntlProvider } from 'react-intl';
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-import Login from './login/components/login';
-import SubMenu from './login/components/subMenu';
-import SubMenuLanguages from './login/components/subMenuLanguages';
-import Terms from './login/components/terms';
-import Policy from './login/components/policy';
-import About from './login/components/about';
-import CustomerService from './login/components/customerService';
-import ChangePassword from './login/components/changePassword';
-import ForgottenPassword from './login/components/forgottenPassword';
-
-import en from 'react-intl/locale-data/en';
-import es from 'react-intl/locale-data/es';
-import fr from 'react-intl/locale-data/fr';
-import de from 'react-intl/locale-data/de';
-import it from 'react-intl/locale-data/it';
-import br from 'react-intl/locale-data/br';
-import messages from './login/messages.json';
-
-
-addLocaleData([...en, ...es, ...fr, ...de, ...it, ...br]);
-
-const HeaderDate = () => {
-  return (
-    <div className="div_date">Thursday, 02 November 2017</div>
-  )
-}
-
-const repo = `/${window.location.pathname.split('/')[1]}`;
-
-const App = (props) => {
-
-  const renderLanguage = () => {
-    const arrayLanguage = ['es', 'en', 'fr', 'de', 'it', 'cn', 'br'];
-    return arrayLanguage.map((item, i) => {
-      return <SubMenuLanguages key={i} locale={item} changeLanguage={changeLanguage} />
-    });
-  }
-
-  const changeLanguage = idLocale => {
-    props.setLanguage(idLocale);
-  }
-  return (
-
-    <IntlProvider locale={props.locale} messages={messages[props.locale]}>
-      <Router basename={repo}>
-        <div>
-          <div className="div_language">
-            {renderLanguage()}
-          </div>
-          <HeaderDate />
-          <SubMenu />
-          <Route exact path="/" component={Login} />
-          <Route path="/terms" component={Terms} />
-          <Route path="/policy" component={Policy} />
-          <Route path="/about" component={About} />
-          <Route path="/customerService" component={CustomerService} />
-          <Route path="/changePassword" component={ChangePassword} />
-          <Route path="/forgottenPassword" component={ForgottenPassword} />
-        </div>
-      </Router>
-    </IntlProvider>
-  );
-};
-
-const mapStateToProps = (state) => {
-  return {
-    locale: state.setLanguage
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
   }
 }
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setLanguage: (locale) => {
-      dispatch({ type: 'SET_LANGUAGE', language: locale })
-    }
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+
+export default App;
